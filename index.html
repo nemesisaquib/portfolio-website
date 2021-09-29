@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="img/png" href="signature-01.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Website.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+
+  <!-- <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      scroll-behavior: smooth;
+    }
+
+
+    nav {
+      position: fixed;
+      width: 100%;
+      font-family: "ubuntu", sans-serif;
+      padding: 20px 0;
+      transition: all 0.4s ease;
+      z-index: 998;
+    }
+
+    nav.sticky {
+      padding: 30px;
+      background-color: #4070f4;
+    }
+
+    nav.sticky .navbar .logo a {
+      color: white;
+    }
+
+    nav .navbar {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto;
+    }
+
+    nav .navbar .logo a {
+      font-size: 35px;
+      font-weight: 500;
+      color: #4070f4;
+    }
+
+    nav .navbar .menu {
+      display: flex;
+      position: relative;
+    }
+
+    nav .navbar .menu li {
+      margin: 0 8px;
+      list-style: none;
+    }
+
+    nav.sticky .navbar .menu li a {
+      color: white;
+    }
+
+    .navbar .menu li a {
+      font-size: 18px;
+      font-size: 500;
+      color: #0e2431;
+      transition: all 0.3s ease;
+    }
+
+    .navbar .menu li a:hover {
+      color: #4070f4;
+    }
+
+    nav.sticky .navbar .menu li a:hover {
+      color: #00ffbf;
+    }
+
+    .navbar .madis-icons a {
+      font-size: 18px;
+      margin: 0 6px;
+      color: #4070f4;
+    }
+
+    nav.sticky .navbar .madis-icons a {
+      color: #ffffff;
+    }
+
+    nav .menu-btn,
+    .navbar .cancel-btn {
+      position: absolute;
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+      right: 30px;
+      top: 20px;
+      display: none;
+      cursor: pointer;
+    }
+
+    nav .menu-btn {
+      color: #4070f4;
+    }
+
+
+    nav.sticky .menu-btn {
+      color: #ffffff;
+    }
+
+    .home {
+      height: 100vh;
+      width: 100%;
+      background: url("bg.png") no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: "ubuntu", sans-serif;
+    }
+
+    .home .home-content {
+      height: 100vh;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .home .text .text-one {
+      font-size: 25px;
+      color: #0e2431;
+    }
+
+    .home .text .text-two {
+      font-size: 75px;
+      font-weight: 600;
+      margin-left: -3px;
+      color: #0e2431;
+    }
+
+    .home .text .text-three {
+      font-size: 40px;
+      color: #0e2431;
+    }
+
+    .home .text .text-four {
+      font-size: 23px;
+      margin: 5px 0;
+      color: #0e2431;
+    }
+
+    .home .button {
+      margin: 14px 0;
+    }
+
+    .home .button button {
+      outline: none;
+      color: white;
+      font-size: 25px;
+      font-weight: 500;
+      padding: 8px 16px;
+      background: #4070f4;
+      border: 2px solid transparent;
+      border-radius: 5px;
+    }
+
+    .home .button button:hover {
+      color: #4070f4;
+      background-color: white;
+      border-color: #4070f4;
+    }
+
+    section {
+      padding-top: 40px;
+    }
+
+    section .content {
+      width: 80%;
+      margin: 40px auto;
+
+      font-family: "Poppins", sans-serif;
+    }
+
+    section .title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    section .title span {
+      font-size: 30px;
+      font-weight: 600;
+
+      position: relative;
+    }
+
+    section .title span::before,
+    section .title span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 100%;
+      background: #00ffd5;
+    }
+
+    section .title span::after {
+      width: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -7px;
+    }
+
+    .about .about-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .about .about-details .right {
+      width: 45%;
+    }
+
+    .about .about-details .right img {
+      height: 400px;
+      width: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .about .about-details .left {
+      width: 55%;
+    }
+
+    section .topic {
+      font-size: 25px;
+      font-weight: 500;
+      color: #0e2431;
+      margin-bottom: 10px;
+    }
+
+    .about-details .left p {
+      color: #0e2431;
+      text-align: justify;
+    }
+
+    section .button {
+      margin: 14px 0;
+    }
+
+    section .button button {
+      outline: none;
+      color: white;
+      font-size: 25px;
+      font-weight: 500;
+      padding: 8px 16px;
+      background: #4070f4;
+      border: 2px solid transparent;
+      border-radius: 5px;
+    }
+
+    section .button button:hover {
+      color: #4070f4;
+      background-color: #5baa9f;
+      border-color: #4070f4;
+    }
+
+    a {
+      color: rgb(255, 255, 255);
+    }
+
+    a:hover {
+      color: #ffffff;
+    }
+
+    .button .like:hover {
+      color: #5baa9f;
+    }
+
+
+    .skills {
+      background: #e0f3f8;
+    }
+
+    .skills .content {
+      padding: 40px 0;
+    }
+
+    .skills .skills-details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .skills .skills-details .left {
+      width: 50%;
+    }
+
+    .skills-details .left p {
+      color: #0e2431;
+      text-align: justify;
+    }
+
+    .skills-details .left .experience {
+      display: flex;
+      align-items: center;
+      margin: 0 10px;
+    }
+
+    .skills-details .left .experience .num {
+      font-size: 80px;
+      color: #0e2431;
+      font-weight: 500;
+    }
+
+    .skills-details .left .experience .exp {
+      font-size: 18px;
+      font-weight: 500;
+
+    }
+
+    .skills .skills-details .boxes {
+      width: 45%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .skills .skills-details .boxes .box {
+      width: calc(100% / 2 - 20px);
+      margin: 20px 0;
+    }
+
+    .skills-details .boxes .topic {
+      font-size: 20px;
+      color: #4070f4;
+    }
+
+    .skills-details .boxes .num {
+      font-size: 60px;
+      color: #4070f4;
+    }
+
+    .services .boxes {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .services .boxes .box {
+      width: calc(100% /2 - 20px);
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+      padding: 20px 10px;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .services .boxes .box:hover {
+      background: #4070f4;
+      color: #fff;
+
+    }
+
+    .services .boxes .box .icon {
+      height: 50px;
+      width: 50px;
+      color: white;
+      background: #4070f4;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      margin: 0 auto 10px auto;
+      transition: all 0.4s ease;
+    }
+
+    .services .boxes .box:hover .icon {
+      background: #fff;
+      color: #ff9d00;
+      ;
+      border: 1.5px solid rgb(1, 255, 98);
+    }
+
+    .services .boxes .box:hover .topic {
+      color: #fff;
+    }
+
+    .contact {
+      background: #f0f8ff;
+      padding: 20px 0;
+    }
+
+    .contact .text {
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      margin: auto;
+      width: 80%;
+
+    }
+
+
+
+
+    footer {
+      font-family: "ubuntu", sans-serif;
+      text-align: center;
+      background: #4070F4;
+      color: white;
+      padding: 15px 0;
+    }
+
+    footer .text span {
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+
+    }
+
+    .ddg {
+      color: white;
+      text-decoration: underline 2px solid rgb(255, 251, 0);
+      transition: all 0.1s ease-out;
+    }
+
+    footer .text span a:hover {
+      border-left: 3px solid rgb(255, 255, 255);
+      border-top: 3px solid rgb(255, 255, 255);
+      text-decoration: underline;
+      color: rgb(255, 145, 0);
+
+    }
+
+    .scroll-btn i {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 7px 12px;
+      background: #00ffd5;
+      color: white;
+      font-size: 18px;
+      border-radius: 6px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+
+
+    }
+
+
+
+
+    .one {
+
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+
+      margin-top: -6px;
+      margin-left: 200px;
+      overflow: hidden;
+    }
+
+
+
+    #aquib {
+      font-size: 18px;
+      font-size: 500;
+      color: #0e2431;
+      border: 5px solid black;
+      transition: all 0.3s ease;
+    }
+
+    #aquib a:hover {
+      color: #4070f4;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 1190px) {
+      .about .content {
+        width: 85%;
+      }
+
+      .skills .content {
+        width: 90%;
+      }
+
+      .services .content {
+        width: 90%;
+      }
+
+    }
+
+    @media (max-width: 1090px) {
+      .about .about-details {
+        flex-direction: column;
+      }
+
+      .about .about-details .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .about .about-details .left {
+        width: 90%;
+        margin: 40px 0;
+      }
+
+      .services .boxes .box {
+        width: calc(100% /2 - 20px);
+
+      }
+
+
+      .contact .text {
+        width: 90%;
+
+      }
+    }
+
+
+
+    @media (max-width: 971px) {
+      .about .about-details .right img {
+        height: 350px;
+        width: 350px;
+      }
+    }
+
+    @media (max-width: 750px) {
+      nav .navbar .menu {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        background-color: #0d1a3b;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        transition: all 0.5s ease;
+      }
+
+      nav .navbar.active .menu {
+        left: 0;
+      }
+
+      nav .navbar .menu .one {
+        left: 0;
+
+        top: 50%;
+
+      }
+
+      .navbar .menu li a {
+        display: block;
+        margin: 10px 0;
+        font-size: 23px;
+        color: #fff;
+      }
+
+      nav.sticky .navbar .menu li a:hover {
+        color: #00ffbf;
+
+      }
+
+      .navbar .madis-icons a {
+        display: none;
+      }
+
+      nav .menu-btn,
+      .navbar .cancel-btn {
+        display: block;
+      }
+
+      .home .text .text-two {
+        font-size: 65px;
+      }
+
+      .home .text .text-three {
+        font-size: 35px;
+      }
+
+      .skills .skills-details {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .skills .skills-details .left {
+        width: 90%;
+      }
+
+      .skills .skills-details .boxes {
+        width: 90%;
+        margin: 40px 0;
+
+      }
+
+      .services .boxes .box {
+        width: 100%;
+
+      }
+
+      .contact .text {
+        width: 100%;
+
+      }
+    }
+
+    @media (max-width: 510px) {
+      .home .text .text-two {
+        font-size: 55px;
+      }
+
+      .home .text .text-three {
+        font-size: 33px;
+      }
+    }
+  </style> -->
+  <title>Portfolio Website</title>
+</head>
+
+<body>
+
+
+  <div class="scroll-btn">
+    <a href="#home"> <i class="fas fa-arrow-up"></i></a>
+  </div>
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">portfolio</a></div>
+
+      <ul class="menu">
+        <!-- <div>
+            <img class="one" src="signature.png" alt=""  >
+          </div> -->
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">services</a></li>
+        <li><a href="#contact">contact</a></li>
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+      </ul>
+      <div class="madis-icons">
+        <a href="https://github.com/nemesisaquib" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/Aquibjaved_1989" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/nemesis.graphic_aquib/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="text">
+        <div class="text-one">Hello</div>
+        <div class="text-two">I'm Mohd Aquib Javed</div>
+        <div class="text-two" style="font-size: 15px">Nemesis</div>
+        <div class="text-three">Graphic & Web Desgin</div>
+        <div class="nemesis"></div>
+
+
+
+
+
+        <div class="text-four">from India</div>
+      </div>
+      <div class="button">
+        <button><a class="like" href="https://www.linkedin.com/in/aquib-javed-65a31ba3/" target="_blank">Hire
+            Me</a></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="content">
+      <div class="title"><span>About Me</span></div>
+      <div class="about-details">
+        <div class="right">
+          <img src="aquib.jpg" alt="" />
+        </div>
+        <div class="left">
+          <div class="topic">Designing Is My Passion</div>
+          <p>
+            Hi my name is Aquib javed i am a graphic design & website
+            development I am ambitious and driven. I thrive on challenge and
+            constantly set goals for myself, so I have something to strive
+            toward. I'm always looking for an opportunity to do better and
+            achieve greatness.
+          </p>
+          <div class="button">
+            <button>
+              <a class="google"
+                href="https://drive.google.com/file/d/1862j1u2icpyaphng_x17LMo4VSvEDreK/view?usp=sharing"
+                target="_blank">Download CV</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="content">
+      <div class="title"><span>My Skills</span></div>
+      <div class="skills-details">
+        <div class="left">
+          <div class="topic">Skills Reflects Our Knowledge</div>
+
+          <p>
+
+            development I am ambitious and driven Ability to Learn Digital Design Software
+            Critical thinking
+            Deadline management
+            Organization skills
+            Design strategy so I have something to strive
+            toward. I'm always looking for an opportunity to do better and
+            achieve greatness.
+          </p>
+          <div class="experience">
+            <div class="num">No</div>
+            <div class="exp">
+              experience <br />
+              I'm Fresher
+            </div>
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="box">
+            <div class="topic">CSS</div>
+            <div class="num">70%</div>
+          </div>
+          <div class="box">
+            <div class="topic">HTML</div>
+            <div class="num">80%</div>
+          </div>
+
+          <div class="box">
+            <div class="topic">JavaScript</div>
+            <div class="num">30%</div>
+          </div>
+          <div class="box">
+            <div class="topic">Adobe XD</div>
+            <div class="num">50%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="content">
+      <div class="title"><span>My Services</span></div>
+      <div class="boxes">
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <div class="topic">Web Devlopment</div>
+          <p>
+            Hi there i am a full time WEB designer i have good knowledge in
+            html and CSS you come to right place for your design any kind of
+            design What You will get from me:100% Satisfaction Print Ready
+            your designs or any kind designs
+
+            <br />
+            PNG, PSD, PDF, JPEG and SVG format
+          </p>
+        </div>
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <div class="topic">Graphic Design</div>
+          <p>
+            Hi there i am a full time graphic designer i have
+            good knowledge in Adobe PhotoShop , Corel Draw and Illustration you come to right place
+            for your design Service for this gig: all size Resolutions
+            <br> Available A2 A3 A4 A5 any Custom size or Web quality any kind of
+            design We create any kind Design for parties, web banner , food,
+            banne, events and many more. What You will get from me: 100%
+            Satisfaction Print Ready your designs or any kind designs <br> PNG,
+            PSD, PDF, JPEG and SVG format
+          </p>
+        </div>
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-columns"></i>
+          </div>
+          <div class="topic">Web layout design</div>
+          <p>
+            Hi there i have
+            good knowledge in Adobe XD you come to right place all size Resolutions
+            <br> Available mobile size & web size and any Custom size or Web quality any kind of
+            design We create any kind Web Design for layout, UI design , UX design,
+            webpage, website and many more. What You will get from me: 100%
+            Satisfaction Print Ready your designs or any kind Web designs <br> PNG,
+            PSD, PDF, JPEG and SVG format
+          </p>
+        </div>
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-font"></i>
+          </div>
+          <div class="topic">Typography</div>
+          <p>
+            Hi there i make
+            good typepraphy in adobe photoShop and illustration you come to right place all size Resolutions
+            <br> Available andA2 A3 A4 A5 any Custom size or Web quality any kind of
+            design We create any kind text for. What You will get from me: 100%
+            Satisfaction Print Ready your designs or any kind text designs <br> PNG,
+            PSD, PDF, JPEG and SVG format
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact">
+      <div class="title"><span>Contact Me</span></div>
+      <div class="text">
+        <div class="topic">Have Any Project?</div>
+        <p>
+          Here is my business contact Mail. You can reach me at on this Mail.
+        </p>
+        <div class="button">
+          <button> <a href="mailto:nemesisgraphic19@gmail.com?subject=what i do for you!&bod=Message">
+              Let's Chat
+            </a>
+          </button>
+          </form>
+        </div </div>
+      </div>
+  </section>
+
+  <footer>
+    <div class="text">
+      <span>Created By
+        <a class="ddg" href="https://www.fiverr.com/nemesisaquib?up_rollout=true" target="_blank">NemesisAquib</a>|
+        &#169; 2021 All Right Reserved
+      </span>
+    </div>
+  </footer>
+
+  <!-- <script>
+    let menuBtn = document.querySelector(".menu-btn");
+    let cancelBtn = document.querySelector(".cancel-btn");
+    let navBar = document.querySelector(".navbar");
+    let body = document.querySelector("body");
+
+
+    menuBtn.onclick = function () {
+      menuBtn.style.opacity = "0";
+      menuBtn.style.opinterEvents = "none";
+      navBar.classList.add("active");
+      body.style.overflow = "hidden"
+
+    }
+
+    cancelBtn.onclick = function () {
+      menuBtn.style.opacity = "1";
+      menuBtn.style.opinterEvents = "auto";
+      navBar.classList.remove("active");
+      body.style.overflow = "auto"
+    }
+
+    let nav = document.querySelector("nav");
+
+    let val;
+
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop > 20) {
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    }
+
+    let navLink = document.querySelectorAll(".menu li a");
+    for (var i = 0; i < navLink.length; i++) {
+      navLink[i].addEventListener("click", () => {
+        menuBtn.style.opacity = "1";
+        menuBtn.style.pointerEvents = "auto";
+        navBar.classList.remove("active");
+        body.style.overflow = "auto";
+      });
+    }
+  // </script> -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <!-- <script src="/__/firebase/8.6.2/firebase-app.js"></script> -->
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+  //    https://firebase.google.com/docs/web/setup#available-libraries -->
+
+ <!-- Initialize Firebase -->
+  <!-- // <script src="/__/firebase/init.js"></script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
